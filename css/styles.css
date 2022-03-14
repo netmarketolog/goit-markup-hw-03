@@ -54,6 +54,19 @@ img {
     height: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .link {
     text-decoration: none
 }
@@ -63,10 +76,6 @@ img {
     margin: 0 auto;
     padding: 0 15px;
     /* outline: 2px solid tomato; */
-}
-
-.flex {
-    display: flex;
 }
 
 
@@ -97,7 +106,8 @@ img {
     border-bottom: 1px solid #ECECEC;
 }
 
-.container.flex {
+.container.page-header {
+    display: flex;
     align-items: center;
 }
 
@@ -191,7 +201,7 @@ img {
 /* Section */
 
 .section {
-    padding: 94px;
+    padding: 94px 0;
 }
 
 .section .section-title {
@@ -241,9 +251,12 @@ img {
 
 /* What are we doing */
 
+.doing-section {
+    padding-top: 0;
+}
+
 .doing {
     display: flex;
-    padding-top: 0;
 }
 
 .doing-item:not(:last-child) {
@@ -253,9 +266,12 @@ img {
 
 /* Team */
 
+.team-section {
+    background-color: var(--bac-secondary-color);
+}
+
 .team {
     display: flex;
-    background-color: var(--bac-secondary-color);
 }
 
 .team-item {
@@ -392,7 +408,7 @@ img {
 .filter {
     display: flex;
     justify-content: center;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
 }
 
 .filter-iteam:not(:last-child) {
@@ -428,6 +444,8 @@ img {
 .gallery-desc {
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
+    border-top: none;
+    padding: 20px 24px;
 }
 
 .gallery-title {
@@ -436,7 +454,7 @@ img {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    margin: 20px 24px 0 24px;
+    margin-bottom: 4px;
 }
 
 .gallery-text {
@@ -444,5 +462,4 @@ img {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-    margin: 0 24px 20px 24px;
 }
